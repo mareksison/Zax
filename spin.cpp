@@ -31,6 +31,21 @@ Vtx vertices[nVertices];
 Vtx cannonVtx[nVertices/2];
 float cannonAgi = 0.03;
 
+void genStars(GLfloat x, GLfloat y, GLfloat c)
+{
+	vertices[0].x = x;
+	vertices[0].y = y;
+	
+	vertices[1].x = x+c;
+	vertices[1].y = y;
+
+	vertices[2].x = x+c;
+	vertices[2].y = y-c;
+	
+	vertices[3].x = x;
+	vertices[3].y = y-c;
+}
+
 float shots[100][6];
 int currentShot = 0;
 int fullShots = 0; //boolean
